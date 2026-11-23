@@ -1,6 +1,6 @@
 # Marshal for Home Assistant
 
-A custom integration that makes [Marshal](../README.md) an Assist conversation agent. Every turn you speak to a
+A custom integration that makes [Marshal](https://github.com/lGruenzweilHTL/marshal) an Assist conversation agent. Every turn you speak to a
 voice satellite or type into the Assist dialog is forwarded to Marshal; Marshal's reply streams back into Home
 Assistant, so text-to-speech can start before the whole answer is ready.
 
@@ -14,13 +14,12 @@ Requires Home Assistant 2026.9 or newer and a Marshal instance that serves API v
 
 ### HACS (custom repository)
 
-HACS installs integrations from repositories that have `custom_components/marshal/` at their root. Once the
-integration is published as its own repository, add that repository in HACS under
-**⋮ → Custom repositories** with the category **Integration**, install **Marshal** and restart Home Assistant.
+Add this repository in HACS under **⋮ → Custom repositories** with the category **Integration**, install
+**Marshal** and restart Home Assistant.
 
 ### Manual
 
-Copy `ha/custom_components/marshal` from this repository into the `custom_components` folder of your Home Assistant
+Copy `custom_components/marshal` from this repository into the `custom_components` folder of your Home Assistant
 configuration (so that `custom_components/marshal/manifest.json` exists) and restart Home Assistant.
 
 ## Create an API token
@@ -66,7 +65,6 @@ Tests use [`pytest-homeassistant-custom-component`](https://github.com/MatthewFl
 with Marshal mocked; they need [uv](https://docs.astral.sh/uv/):
 
 ```sh
-cd ha
 uv sync
 uv run pytest
 ```
